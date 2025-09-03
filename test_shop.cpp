@@ -140,3 +140,12 @@ TEST_CASE("Pen inheritance and methods", "[Pen]") {
     REQUIRE(pen.getProductType() == "PaperProduct");
     REQUIRE(pen.getName() == "Pen");
 }
+
+TEST_CASE("Shop products atribute and printProductsList method","[Pen]") {
+    Shop shop;
+    Bread bread;
+    shop.addToStore(&bread);
+    shop.addToStore(&bread);
+    std::string productList = shop.printProductsList();
+    REQUIRE(foodProducts.find("Bread\nBread") != std::string::npos);
+}
