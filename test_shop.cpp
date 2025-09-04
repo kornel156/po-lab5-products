@@ -141,7 +141,7 @@ TEST_CASE("Pen inheritance and methods", "[Pen]") {
     REQUIRE(pen.getName() == "Pen");
 }
 
-TEST_CASE("Shop products atribute and printProductsList method","[Pen]") {
+TEST_CASE("Shop products atribute and printProductsList method","[Shop]") {
     Shop shop;
     Bread bread;
     shop.addToStore(&bread);
